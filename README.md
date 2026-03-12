@@ -16,8 +16,8 @@ An end-to-end NLP project on French insurance customer reviews — from data cle
 
 ### 1. Clone the repository
 ```bash
-git clone https://github.com/YOUR_USERNAME/insurance-nlp-app.git
-cd insurance-nlp-app
+git clone https://github.com/YOUR_USERNAME/NLP_project2.git
+cd NLP_project2
 ```
 
 ### 2. Install dependencies
