@@ -1,0 +1,51 @@
+# Dataset (too large / private)
+avis_clients.csv
+
+# Generated data files (reproducible by running the pipeline)
+data_clean.csv
+data_with_topics.csv
+
+# Trained models
+*.pkl
+*.model
+word2vec.model.wv.vectors.npy
+word2vec.model.syn1neg.npy
+
+# Tensorboard / embedding files
+tensorboard_vectors.tsv
+tensorboard_metadata.tsv
+embeddings_2d.csv
+embeddings_3d.tsv
+
+# Output plots
+*.png
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.Python
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# Virtual environments
+venv/
+env/
+.venv/
+.env/
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
