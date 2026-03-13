@@ -119,3 +119,7 @@ Open [http://localhost:6006](http://localhost:6006) → **Projector** tab → lo
 ## 👤 Author
 
 Built as part of an NLP supervised & unsupervised learning project.
+
+## Streamlit app link
+
+Visit the Streamlit app of the project here : https://insurancereviewapp.streamlit.app
