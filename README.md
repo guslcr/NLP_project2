@@ -118,7 +118,7 @@ Open [http://localhost:6006](http://localhost:6006) → **Projector** tab → lo
 
 ## 👤 Author
 
-Built as part of an NLP supervised & unsupervised learning project.
+Built by Augustin Leclair as part of an NLP supervised & unsupervised learning project for ESILV A4 DIA.
 
 ## Streamlit app link
 
