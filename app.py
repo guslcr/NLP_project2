@@ -77,21 +77,21 @@ TOPIC_MAP = {
     6: "Auto Insurance", 7: "Health Insurance",
 }
 TOPIC_KEYWORDS = {
-    "Customer Service":    ["conseiller","service","telephone","appel","contact","accueil","equipe","reponse","aimable","ecoute"],
-    "Claims Processing":   ["sinistre","remboursement","dossier","delai","indemnisation","declaration","prise","charge","expertise"],
-    "Pricing & Contracts": ["prix","tarif","cotisation","prime","contrat","augmentation","cout","economique","cher","abordable"],
-    "Coverage & Guarantees":["garantie","couverture","assurance","risque","protection","responsabilite","franchise"],
-    "Cancellation":        ["resiliation","resilier","echeance","annulation","renouvellement","hamon","lettre"],
-    "Online / Digital":    ["application","site","espace","ligne","interface","numerique","connexion","compte"],
-    "Auto Insurance":      ["vehicule","voiture","accident","collision","conducteur","permis","route"],
-    "Health Insurance":    ["sante","medecin","consultation","hospitalisation","optique","dentaire","mutuelle"],
+    "Customer Service":    ["advisor","service","phone","call","contact","reception","team","response","friendly","listening"],
+    "Claims Processing":   ["claim","reimbursement","file","delay","compensation","declaration","coverage","expertise"],
+    "Pricing & Contracts": ["price","rate","contribution","premium","contract","increase","cost","affordable","expensive"],
+    "Coverage & Guarantees":["guarantee","coverage","insurance","risk","protection","liability","deductible"],
+    "Cancellation":        ["cancellation","cancel","deadline","termination","renewal","letter"],
+    "Online / Digital":    ["app","website","portal","online","interface","digital","login","account"],
+    "Auto Insurance":      ["vehicle","car","accident","collision","driver","license","road"],
+    "Health Insurance":    ["health","doctor","consultation","hospitalization","optical","dental","mutual"],
 }
-POS_WORDS = {"satisfait","excellent","parfait","content","super","recommande","merci",
-             "bravo","rapide","efficace","professionnel","agreable","serieux","top",
+POS_WORDS = {"satisfied","excellent","perfect","happy","great","recommend","thank",
+             "bravo","fast","efficient","professional","pleasant","serious","top",
              "satisfied","excellent","perfect","happy","great","recommend","fast",
              "efficient","professional","pleasant","serious"}
-NEG_WORDS = {"probleme","mauvais","terrible","nul","arnaque","honte","fuir","decevant",
-             "insatisfait","lent","nul","refuses","impossible","incompetent","arnaque",
+NEG_WORDS = {"problem","bad","terrible","awful","scam","shame","flee","disappointing",
+             "unsatisfied","slow","refused","impossible","incompetent","fraud",
              "problem","bad","terrible","awful","scam","shame","flee","disappointing",
              "unsatisfied","slow","refuses","impossible","incompetent"}
 
@@ -272,7 +272,7 @@ with tabs[0]:
     with col1:
         user_input = st.text_area(
             "Your review",
-            placeholder="Ex: J'ai contacté le service client suite à mon accident, ils ont été très réactifs...",
+            placeholder="Ex: I contacted customer service after my accident, they were very responsive...",
             height=150,
             key="pred_input"
         )
@@ -281,9 +281,9 @@ with tabs[0]:
     with col2:
         st.markdown("**Examples:**")
         ex_texts = [
-            "Service excellent, remboursement rapide et conseiller très aimable.",
-            "Impossible de résilier, aucune réponse, je suis très déçu.",
-            "Prix raisonnable mais la procédure de sinistre est longue.",
+            "Excellent service, fast reimbursement and very friendly advisor.",
+            "Unable to cancel, no response at all, I am very disappointed.",
+            "Reasonable price but the claims process takes too long.",
         ]
         for ex in ex_texts:
             if st.button(ex[:55]+"...", key=f"ex_{ex[:10]}"):
@@ -502,7 +502,7 @@ with tabs[2]:
     
     sc1, sc2, sc3, sc4 = st.columns(4)
     with sc1:
-        search_query = st.text_input("Keyword search", placeholder="remboursement sinistre...")
+        search_query = st.text_input("Keyword search", placeholder="reimbursement claim...")
     with sc2:
         filter_insurer = st.selectbox("Insurer", ["All"] + sorted(df["assureur"].unique()))
     with sc3:

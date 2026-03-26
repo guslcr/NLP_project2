@@ -26,14 +26,11 @@ pip install -r requirements.txt
 ```
 
 ### 3. Add the dataset
-Place `avis_clients.csv` in the root folder (not included in the repo — see [Data](#data) section below).
+Place `avis_clients.csv` in the root folder.
 
 ### 4. Run the pipeline
 ```bash
-python 01_data_cleaning.py
-python 02_topic_modeling.py
-python 03_embeddings.py
-python 04_supervised_learning.py
+python run_all.py
 ```
 
 ### 5. Launch the app
@@ -41,6 +38,8 @@ python 04_supervised_learning.py
 streamlit run app.py
 ```
 Then open [http://localhost:8501](http://localhost:8501) in your browser.
+
+You can also launch the app directly by this link : https://insurancereviewapp.streamlit.app/ .
 
 ## 📊 App Features
 
@@ -67,7 +66,6 @@ Then open [http://localhost:8501](http://localhost:8501) in your browser.
 The dataset (`avis_clients.csv`) contains ~34,000 French insurance reviews with columns:
 `note`, `auteur`, `avis`, `assureur`, `produit`, `type`, `date_publication`, `avis_en`
 
-> ⚠️ The dataset is **not included** in this repository. Place your own `avis_clients.csv` in the root folder before running the pipeline.
 
 ## 🧠 NLP Techniques Used
 
@@ -118,7 +116,7 @@ Open [http://localhost:6006](http://localhost:6006) → **Projector** tab → lo
 
 ## 👤 Author
 
-Built by Augustin Leclair as part of an NLP supervised & unsupervised learning project for ESILV A4 DIA.
+Built by Augustin Leclair and Thomas Boulaine as part of an NLP supervised & unsupervised learning project for ESILV A4 DIA.
 
 ## Streamlit app link
 
